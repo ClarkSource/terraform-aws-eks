@@ -120,6 +120,12 @@ variable "worker_security_group_id" {
   default     = ""
 }
 
+variable "worker_ami_owner_filter" {
+  description = "Additional owner filter for AWS EKS worker AMI if you want to use custom worker AMIs. Defaults to AWS EKS team owner ID."
+  type        = string
+  default     = "602401143452"
+}
+
 variable "worker_ami_name_filter" {
   description = "Additional name filter for AWS EKS worker AMI. Default behaviour will get latest for the cluster_version but could be set to a release from amazon-eks-ami, e.g. \"v20190220\""
   type        = string

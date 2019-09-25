@@ -25,7 +25,7 @@ data "aws_ami" "eks_worker" {
   most_recent = true
 
   # Owner ID of AWS EKS team
-  owners = ["602401143452"]
+  owners = [var.worker_ami_owner_filter]
 }
 
 data "aws_iam_policy_document" "cluster_assume_role_policy" {
